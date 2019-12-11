@@ -7,6 +7,15 @@
 </p>
 <br><br>
 
+# NOTE - about this fork of FlutterBlue
+
+This fork of FlutterBlue introduces two main changes: allowing duplicate
+devices when BLE scanning (by setting
+`CBCentralManagerScanOptionAllowDuplicatesKey` to `YES`), and *only*
+emitting characteristic values after they have been changed. This allows
+us to not care about the cached value of the characteristic which is
+read upon service discovery.
+
 ## Introduction
 
 FlutterBlue is a bluetooth plugin for [Flutter](http://www.flutter.io), a new mobile SDK to help developers build modern apps for iOS and Android.
